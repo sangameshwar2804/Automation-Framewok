@@ -13,7 +13,7 @@ public static WebDriver getDiver(String browsername)
 	try {
 		switch (browsername) {
 		case "chrome":
-			System.setProperty("webdriver.chrome.driver", "\\resources\\drivers\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\resources\\drivers\\chromedriver.exe");
 			driver=new ChromeDriver();
 			break;
 		case "firefox":
